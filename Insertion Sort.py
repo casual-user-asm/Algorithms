@@ -4,7 +4,6 @@
 """
 
 def insertion_sort(arr):
-    
     n = len(arr)
 
     for i in range(1, n):
@@ -14,7 +13,6 @@ def insertion_sort(arr):
         while q >= 0 and arr[q] > key:
             arr[q+1] = arr[q]
             q -= 1
-
         arr[q+1] = key
 
     return arr
