@@ -4,7 +4,6 @@
 """
 
 def binary_search(data, element):
-    
     min_index = 0
     max_index = len(data) - 1
 
