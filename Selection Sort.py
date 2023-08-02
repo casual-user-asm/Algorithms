@@ -3,8 +3,7 @@
     It sorts the array in-place, meaning it does not require additional memory to perform the sorting.
 """
 
-def selection_sort(arr):
-    
+def selection_sort(arr): 
     n = len(arr)
 
     for i in range(n - 1):
@@ -13,5 +12,6 @@ def selection_sort(arr):
         for j in range(i + 1, n):
             if arr[j] < arr[min_index]:
                 min_index = j
-
         arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
