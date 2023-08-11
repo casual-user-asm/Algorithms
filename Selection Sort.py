@@ -1,6 +1,7 @@
 """
     Selection Sort is a simple sorting algorithm that works by repeatedly selecting the minimum (or maximum) element from the unsorted part of the array and swapping it with the first element of the unsorted part.
     It sorts the array in-place, meaning it does not require additional memory to perform the sorting.
+    O(n^2)
 """
 
 def selection_sort(arr): 
