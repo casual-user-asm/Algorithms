@@ -11,18 +11,6 @@ def bfs(graph, start):
     while queue:
         node = queue.popleft()  # Dequeue a node
         if node not in visited:
+            print(node, end=" ")  # Process the visited node
             visited.add(node)
             queue.extend(neighbor for neighbor in graph[node] if neighbor not in visited)
-    
-    return visited
-
-graph = {
-    'A': ['B', 'C'],
-    'B': ['A', 'D', 'E'],
-    'C': ['A', 'F'],
-    'D': ['B'],
-    'E': ['B', 'F'],
-    'F': ['C', 'E']
-}
-
-print(bfs(graph, 'A'))
