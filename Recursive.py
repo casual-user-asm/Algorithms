@@ -4,7 +4,6 @@
 """
 
 def fuctorial(number):
-    
     if number == 0 or number == 1:
         return 1
     else:
@@ -12,7 +11,6 @@ def fuctorial(number):
 
 
 def palindrom(word):
-
     if len(word) <= 1:
         return 'This is palindrom'
     elif word[0] == word[-1]:
@@ -22,10 +20,24 @@ def palindrom(word):
 
 
 def powers_of_number(base, exponent):
-    
     if exponent == 0:
         return 1
     elif exponent < 0:
         return 1 / powers_of_number(base, -exponent)
     else:
         return base * powers_of_number(base, exponent - 1)
+
+#To make a recursive function more effective using a hash table, we can implement memoization.
+
+memo = {}
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+
+    if n in memo:
+        return memo[n]
+
+    result = n * factorial(n - 1)
+    memo[n] = result
+    return result

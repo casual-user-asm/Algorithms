@@ -1,10 +1,10 @@
 """
     Binary search is an efficient searching algorithm used to find the position of a target value within a sorted array.
     The algorithm works by repeatedly dividing the search space in half until the target value is found or until the search space is empty, indicating that the target is not present in the array.
+    O(log n)
 """
 
 def binary_search(data, element):
-    
     min_index = 0
     max_index = len(data) - 1
 
