@@ -28,7 +28,6 @@ def powers_of_number(base, exponent):
         return base * powers_of_number(base, exponent - 1)
 
 #To make a recursive function more effective using a hash table, we can implement memoization.
-
 memo = {}
 
 def factorial(n):
@@ -40,4 +39,5 @@ def factorial(n):
 
     result = n * factorial(n - 1)
     memo[n] = result
+    
     return result
